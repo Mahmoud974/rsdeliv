@@ -78,7 +78,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="container mx-auto p-6 mb-6">
+    <section className="container mx-auto p-6 mb-6" id="contact">
       <p className="text-center">Contact</p>
       <h2 className="text-3xl font-bold text-center mb-6">
         Vous souhaitez en savoir plus ?

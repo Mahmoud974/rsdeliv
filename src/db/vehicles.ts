@@ -22,6 +22,7 @@ export interface Vehicle {
   nombrePortes: number; // Ajout du nombre de portes
   nombrePersonnes: number; // Ajout du nombre de personnes
   ficheTechnique: FicheTechnique;
+  prixParJour: number; // Ajout du prix par jour
 }
 
 export const vehicles: Vehicle[] = [
@@ -47,6 +48,7 @@ export const vehicles: Vehicle[] = [
       chargeUtileStandard: "400 kg",
       volumeUtileStandard: "2 m3",
     },
+    prixParJour: 50,
   },
   {
     id: 2,
@@ -70,6 +72,7 @@ export const vehicles: Vehicle[] = [
       chargeUtileStandard: "500 kg",
       volumeUtileStandard: "3 m3",
     },
+    prixParJour: 60,
   },
   {
     id: 3,
@@ -93,5 +96,6 @@ export const vehicles: Vehicle[] = [
       chargeUtileStandard: "600 kg",
       volumeUtileStandard: "4 m3",
     },
+    prixParJour: 70,
   },
 ];

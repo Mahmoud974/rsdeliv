@@ -1,5 +1,4 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import {
   Card,
@@ -12,17 +11,23 @@ import {
 import { Button } from "./ui/button";
 import { Vehicle } from "@/db/vehicles";
 
-export default function Cardtransport({ car }: { car: Vehicle }) {
-  // État pour gérer l'affichage de la fiche technique
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  // Fonction pour basculer l'état
-  const toggleExpand = () => setIsExpanded(!isExpanded);
-
+export default function Cardtransport({
+  car,
+  isExpanded,
+  toggleExpand,
+}: {
+  car: Vehicle;
+  isExpanded: boolean;
+  toggleExpand: () => void;
+}) {
   return (
-    <Card>
+    <Card
+      className={`transition-all duration-300 ease-in-out ${
+        isExpanded ? "h-auto" : "h-full"
+      }`}
+    >
       <CardHeader>
-        <div className="relative w-full   h-52 mb-4">
+        <div className="relative w-full h-52 mb-4">
           <Image
             src={car.img}
             alt="Camionnette"
@@ -41,18 +46,17 @@ export default function Cardtransport({ car }: { car: Vehicle }) {
             <li>{car.nombrePortes} portes</li>
             <li>{car.nombrePersonnes} personnes</li>
           </ul>
-          <p
-            className="text-blue-500 text-xl font-bold text-center hover:underline cursor-pointer"
-            onClick={toggleExpand} // Toggle au clic
-          >
-            {isExpanded ? "FERMER" : "EN SAVOIR +"}
+          <p className="text-2xl text-center text-black font-bold">
+            {car.prixParJour}€/jour
           </p>
         </CardDescription>
       </CardHeader>
+
+      {/* Affichage de la fiche technique seulement si isExpanded est vrai */}
       {isExpanded && (
         <CardContent>
           <div className="text-center ">
-            <p className="text-2xl mb-2 font-bold ">Fiche Technique</p>
+            <p className="text-2xl mb-2 font-bold">Fiche Technique</p>
             <ul className="text-lg text-center">
               <li>
                 Longueur de chargement: {car.ficheTechnique.longueurChargement}
@@ -86,8 +90,11 @@ export default function Cardtransport({ car }: { car: Vehicle }) {
           </div>
         </CardContent>
       )}
+
       <CardFooter>
-        <Button className="w-full">Réserver</Button>
+        <Button className="w-full" onClick={toggleExpand}>
+          {isExpanded ? "FERMER" : "EN SAVOIR +"}
+        </Button>
       </CardFooter>
     </Card>
   );
