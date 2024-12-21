@@ -29,6 +29,8 @@ export default function ContactForm() {
     message: "",
   });
 
+  const [successMessage, setSuccessMessage] = useState<boolean>(false); // Nouveau state pour le message de succès
+
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -55,6 +57,23 @@ export default function ContactForm() {
     } else {
       setFormErrors({ email: "", message: "" });
       console.log("Form submitted:", formData);
+
+      // Afficher le message de succès
+      setSuccessMessage(true);
+
+      // Masquer le message après 3 secondes
+      setTimeout(() => {
+        setSuccessMessage(false);
+      }, 3000);
+
+      // Réinitialiser le formulaire après l'envoi
+      setFormData({
+        name: "",
+        poem: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
     }
   };
 
@@ -65,7 +84,7 @@ export default function ContactForm() {
         Vous souhaitez en savoir plus ?
       </h2>
 
-      <div className=" max-w-2xl mx-auto gap-8 items-center">
+      <div className="max-w-2xl mx-auto gap-8 items-center">
         {/* Formulaire */}
         <form onSubmit={handleSubmit} className="space-y-4">
           {/* Nom */}
@@ -165,6 +184,11 @@ export default function ContactForm() {
           {/* Submit Button */}
           <Button className="w-full">Envoyer</Button>
         </form>
+
+        {/* Message de succès */}
+        {successMessage && (
+          <p className="text-center text-green-500 mt-4">Message envoyé !</p>
+        )}
       </div>
     </section>
   );
