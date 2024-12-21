@@ -8,8 +8,8 @@ export default function Services() {
       <Image
         src="/container.jpg"
         alt="Photo de plusieurs fourgons"
-        layout="fill"
-        objectFit="cover"
+        fill
+        style={{ objectFit: "cover" }}
         className="absolute inset-0 shadow-lg filter brightness-50"
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center space-y-4 px-4">

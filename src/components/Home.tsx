@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       {/* Section de réseaux sociaux */}
-      <div className="bg-blue-700 px-6 h-auto text-white">
+      <div className="bg-blue-700 lg:px-6 h-auto text-white">
         <div className="container mx-auto flex justify-between items-center">
           <ul className="flex gap-6">
             <li>
@@ -33,11 +33,12 @@ export default function Home() {
             </li>
           </ul>
           <ul className="flex gap-6 items-center">
-            <li className="text-lg text-center font-medium">
+            <li className="  text-center font-medium">
               <p className="text-xs">Notre siège social</p>
-              <p className="font-bold">
-                <span className="font-normal">à</span> PARIS
-              </p>
+              <div className="flex  gap-1  justify-center">
+                <span className="font-normal  ">à</span>
+                <p className="font-bold  underline">PARIS</p>
+              </div>
             </li>
             <li className="flex items-center gap-1 text-lg font-semibold">
               <Phone className="w-5 h-5" />

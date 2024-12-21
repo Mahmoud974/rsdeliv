@@ -13,7 +13,7 @@ import AccordionQuestions from "@/components/Accordion";
 export default function Page() {
   return (
     <>
-      <main>
+      <main className=" ">
         <Home />
         <About />
         <Prestations />

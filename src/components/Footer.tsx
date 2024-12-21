@@ -4,7 +4,7 @@ import { Facebook, Instagram, Mail, Phone } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="bg-black lg:text-left text-center text-white py-8">
-      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:mx-0 px-4">
         {/* Section 1: À propos */}
         <div>
           <h3 className="text-xl font-bold mb-4">À propos</h3>
@@ -46,9 +46,9 @@ export default function Footer() {
         {/* Section 3: Contact */}
         <div className="">
           <h3 className="text-xl font-bold mb-4">Contact</h3>
-          <p>{`Vous avez une question ? N'hésitez pas à nous contacter.`}</p>
-          <ul className="space-y-2  flex mx-auto   flex-col justify-center lg:justify-start ">
-            <li className="flex lg:items-center justify-start mx-auto  gap-2">
+          <p className="">{`Vous avez une question ? N'hésitez pas à nous contacter.`}</p>
+          <ul className="space-y-2  flex mx-auto   flex-col   justify-center lg:justify-start ">
+            <li className="flex lg:items-center mt-3 justify-start mx-auto  gap-2">
               <span className="font-semibold">
                 <Mail />
               </span>{" "}
