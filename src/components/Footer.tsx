@@ -49,8 +49,8 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Contact</h3>
             <p>{`Vous avez une question ? N'hésitez pas à nous contacter.`}</p>
-            <ul className="space-y-2 flex flex-col justify-center items-center">
-              <li className="flex items-center justify-center gap-2">
+            <ul className="space-y-2 flex flex-col lg:justify-start lg:items-start justify-center mt-2 items-center">
+              <li className="flex items-center lg:items-start lg:justify-start   gap-2">
                 <span className="font-semibold">
                   <Mail />
                 </span>
@@ -68,7 +68,7 @@ export default function Footer() {
           {/* Section 4: Réseaux sociaux */}
           <div>
             <h3 className="text-xl font-bold mb-4">Suivez-nous</h3>
-            <ul className="flex justify-center gap-4">
+            <ul className="flex lg:justify-start lg:items-start items-center justify-center    gap-4">
               <li>
                 <a href="#" className="text-white hover:text-gray-400">
                   <Facebook />

@@ -103,22 +103,6 @@ export default function ContactForm() {
             />
           </div>
 
-          {/* Poème */}
-          <div>
-            <label htmlFor="poem" className="block font-semibold">
-              Please enter a small poem
-            </label>
-            <textarea
-              id="poem"
-              name="poem"
-              value={formData.poem}
-              onChange={handleChange}
-              className="w-full p-2 border rounded-md"
-              placeholder="Écrivez un petit poème"
-              rows={4}
-            ></textarea>
-          </div>
-
           {/* E-mail */}
           <div>
             <label htmlFor="email" className="block font-semibold">
