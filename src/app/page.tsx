@@ -21,7 +21,7 @@ export default function Page() {
         <Prestations />
         <Services />
         <Location />
-        {/*<Features /> */}
+  
         <ContactBlue />
 
         <AccordionQuestions />

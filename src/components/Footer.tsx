@@ -100,7 +100,7 @@ export default function Footer() {
               </a>
             </div>
             <div className="text-gray-400">
-              © 2024 RS Deliv. Tous droits réservés.
+              © 2025 RSDeliv. Tous droits réservés.
             </div>
           </div>
         </div>

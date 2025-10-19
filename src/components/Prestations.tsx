@@ -5,22 +5,22 @@ export default function Prestations() {
   return (
     <section className="  mx-auto container flex items-center justify-between my-16 px-4">
       <div className="container flex flex-col lg:flex-row items-center justify-center gap-8">
-        {/* Bloc de l'image */}
+       
         <div className="flex justify-center mb-8 lg:mb-0">
           <Image
             src="/vans.png"
-            width={300}
-            height={300}
+            width={400}
+            height={400}
             alt="Photo van"
             priority={true}
-            className="rounded-lg shadow-lg"
-            style={{ width: "auto", height: "auto" }}
+            className="rounded-lg shadow-lg w-82"
+          
           />
         </div>
 
         {/* Bloc du texte */}
         <div className="text-gray-800 text-left  lg:w-1/2    flex flex-col justify-end">
-          <p className="text-center">Services</p>
+          <p className="text-center text-blue-600">Services</p>
           <h2 className="text-4xl font-extrabold mb-6 leading-tight text-center">
             Des prestations sur mesure, fiables et sécurisées :
           </h2>

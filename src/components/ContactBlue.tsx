@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 export default function ContactBlue() {
   return (
-    <div className="bg-blue-700  py-16">
+    <div className="bg-blue-700 text-white  py-16">
       <div className="text-center mx-auto flex flex-col justify-center">
         <p className="text-3xl font-semibold">
           Vous n’êtes pas encore sûr(e) ? Aucun problème, <br />
