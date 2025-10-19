@@ -10,7 +10,7 @@ import Services from "@/components/Services";
 import React from "react";
 import AccordionQuestions from "@/components/Accordion";
 
-import ContactBlue from "@/components/ContactBlue";
+
 
 export default function Page() {
   return (
@@ -22,7 +22,7 @@ export default function Page() {
         <About />
         <Prestations />
   
-        <ContactBlue />
+        {/* <ContactBlue /> */}
 
         <AccordionQuestions />
         <ContactForm />

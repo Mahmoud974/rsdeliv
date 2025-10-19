@@ -7,9 +7,9 @@ export default function Location() {
   console.log(vehicles);
   const [expandedId, setExpandedId] = useState<number | null>(null);
 
-  // Fonction pour basculer l'état d'une carte
+   
   const toggleExpand = (id: number) => {
-    // Si la carte est déjà ouverte, la fermer. Sinon, l'ouvrir.
+   
     setExpandedId(expandedId === id ? null : id);
   };
   return (
@@ -20,7 +20,7 @@ export default function Location() {
           Véhicule disponible pour vos livraisons
         </h2>
         <p className="lg:mx-0 mx-5">
-          {`Chez RS DELIV, nous vous proposons la location de véhicules utilitaires avec chauffeur dans [votre région ou ville]. 
+          {`Chez RS DELIV, nous vous proposons la location de véhicules utilitaires avec chauffeur dans votre ville. 
   Nous nous occupons de la récupération, du chargement et du déchargement de vos produits, à la date et à l'heure de votre choix.`}
         </p>
       </div>
@@ -30,8 +30,8 @@ export default function Location() {
           <Cardtransport
             key={car.id}
             car={car}
-            isExpanded={expandedId === car.id} // Vérifie si cette carte est ouverte
-            toggleExpand={() => toggleExpand(car.id)} // Passe l'ID de la carte au parent
+            isExpanded={expandedId === car.id}  
+            toggleExpand={() => toggleExpand(car.id)} 
           />
         ))}
       </div>

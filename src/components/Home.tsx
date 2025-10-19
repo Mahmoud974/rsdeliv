@@ -1,17 +1,11 @@
 "use client";
 
-import { Button } from "./ui/button";
-import Image from "next/image";
-import { Facebook, Instagram, Phone, SquareMenu, Search } from "lucide-react";
+ 
+import {  Search } from "lucide-react";
 import React, { useState } from "react";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+ 
+import BlueBar from "./BlueBar";
+import Navbar from "./Navbar";
 
 function BookingBar() {
   const [form, setForm] = useState({
@@ -57,7 +51,7 @@ function BookingBar() {
           />
         </div>
 
-        {/* Départ (date + heure) */}
+        
         <div>
           <label className="text-sm text-gray-300 mb-1 block">Départ</label>
           <input
@@ -127,47 +121,17 @@ function BookingBar() {
 }
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(false);
+ 
 
   return (
     <>
-      {/* Barre top */}
-      <div className="bg-blue-700 text-white">
-        <div className="container mx-auto flex justify-between items-center py-2 lg:px-6">
-          <ul className="flex gap-6">
-            <li>
-              <a href="#" className="hover:text-gray-300 transition">
-                <Facebook className="w-6 h-6" />
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-gray-300 transition">
-                <Instagram className="w-6 h-6" />
-              </a>
-            </li>
-          </ul>
-          <ul className="flex gap-6 items-center">
-            <li className="text-center font-medium">
-              <p className="text-xs">Notre siège social</p>
-              <div className="flex gap-1 justify-center">
-                <span className="font-normal">à</span>
-                <p className="font-bold underline">PARIS</p>
-              </div>
-            </li>
-            <li className="flex items-center gap-1 text-lg font-semibold">
-              <Phone className="w-5 h-5" />
-              <a href="tel:0230882506" className="hover:text-gray-300 transition">
-                02.30.88.25.06
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+ 
+      <BlueBar/>
 
-      {/* HERO avec vidéo + NAV + BookingBar en overlay */}
+      
       <section className="relative h-[60vh] sm:h-[70vh] lg:h-[85vh]">
         <video
-          src="/bg.mp4"
+          src="/transport-logistique-rs-deliv-ile-de-france.mp4"
           autoPlay
           loop
           muted
@@ -176,75 +140,19 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-black/50 -z-0" />
 
-        {/* NAV overlay */}
-        <nav className="absolute top-0 left-0 w-full z-20">
-          <div className="container mx-auto flex justify-between items-center py-3 px-4 sm:px-6 text-white">
-            <Image
-              src="/logo.png"
-              alt="logo RS DELIV"
-              width={1000}
-              height={1000}
-              className="w-20 sm:w-28 md:w-32"
-              priority
-            />
-
-            <ul className="hidden lg:flex gap-8 text-lg">
-              {["Accueil", "Qui sommes-nous", "Services", "Contact", "FAQ"].map((item) => (
-                <li key={item}>
-                  <a
-                    href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
-                    className="hover:text-gray-300 transition hover:bg-blue-600 px-3 py-1 rounded"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-
-            <Button>Réserver</Button>
-
-            {/* Mobile */}
-            <div className="lg:hidden">
-              <Sheet open={isOpen} onOpenChange={setIsOpen}>
-                <SheetTrigger aria-label="Ouvrir le menu">
-                  <SquareMenu className="w-7 h-7" />
-                </SheetTrigger>
-                <SheetContent side="right">
-                  <SheetHeader>
-                    <SheetTitle>Menu</SheetTitle>
-                    <SheetDescription />
-                  </SheetHeader>
-                  <ul className="flex flex-col gap-4 mt-4 text-lg">
-                    {["Accueil", "Qui sommes-nous", "Services", "Contact", "FAQ"].map(
-                      (item) => (
-                        <li key={item}>
-                          <a
-                            href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
-                            onClick={() => setIsOpen(false)}
-                            className="hover:text-blue-600 transition"
-                          >
-                            {item}
-                          </a>
-                        </li>
-                      )
-                    )}
-                  </ul>
-                </SheetContent>
-              </Sheet>
-            </div>
-          </div>
-        </nav>
+    
+         <Navbar/>
 
   
         <div className="absolute inset-0 z-10 mt-28 px-4 text-white">
           
           <div className="pt-28 sm:pt-36 lg:pt-40 max-w-5xl mx-auto text-center">
             <h1 className="text-2xl   sm:text-4xl lg:text-6xl font-extrabold">
-              Transport & logistique à Paris et en Île-de-France
+             <strong className="">Transport</strong> & logistique à <strong>Paris et en Île-de-France</strong>
             </h1>
             <p className="mt-4 text-sm sm:text-lg lg:text-2xl leading-relaxed">
               Installée dans le Val-de-Marne, <strong>RS DELIV</strong> est votre expert
-              en transport express. Des solutions rapides, fiables et professionnelles, partout en France.
+              en <strong className="text-blue-500">transport location </strong> express. Des solutions rapides, fiables et professionnelles, partout en France.
             </p>
           </div>
 

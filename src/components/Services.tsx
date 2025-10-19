@@ -6,7 +6,7 @@ export default function Services() {
   return (
     <div className="relative w-full h-[400px] sm:h-[550px] lg:h-[400px]">
       <Image
-        src="/container.jpg"
+        src="/container.webp"
         alt="Photo de plusieurs fourgons"
         fill
         style={{ objectFit: "cover" }}

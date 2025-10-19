@@ -18,11 +18,11 @@ export interface Vehicle {
   volumeUtile: string;
   chargeUtile: string;
   euroPalette: number;
-  transmission: "Automatique" | "Manuelle"; // Ajout de la transmission
-  nombrePortes: number; // Ajout du nombre de portes
-  nombrePersonnes: number; // Ajout du nombre de personnes
+  transmission: "Automatique" | "Manuelle"; 
+  nombrePortes: number; 
+  nombrePersonnes: number;  
   ficheTechnique: FicheTechnique;
-  prixParJour: number; // Ajout du prix par jour
+  prixParJour: number;  
 }
 
 export const vehicles: Vehicle[] = [
@@ -52,7 +52,7 @@ export const vehicles: Vehicle[] = [
   },
   {
     id: 2,
-    img: "/van-1.png",
+    img: "/van-1.webp",
     title: "Cat 04 Camionnette",
     categorie: "Fourgonette",
     volumeUtile: "3 m3",
@@ -76,7 +76,7 @@ export const vehicles: Vehicle[] = [
   },
   {
     id: 3,
-    img: "/van-3.png",
+    img: "/van-2.webp",
     title: "Cat 04 Camionnette 4m3",
     categorie: "Fourgonette",
     volumeUtile: "4 m3",
