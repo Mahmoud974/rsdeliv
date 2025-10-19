@@ -17,10 +17,10 @@ export default function Page() {
     <>
       <main className=" ">
         <Home />
+        <Location />
+        <Services />
         <About />
         <Prestations />
-        <Services />
-        <Location />
   
         <ContactBlue />
 
