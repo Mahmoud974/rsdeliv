@@ -20,7 +20,7 @@ export default function Location() {
           Véhicule disponible pour vos livraisons
         </h2>
         <p className="lg:mx-0 mx-5">
-          {`Chez RS DELIV, nous vous proposons la location de véhicules utilitaires avec chauffeur dans votre ville. 
+          {`Chez ISANO, nous vous proposons la location de véhicules utilitaires avec chauffeur dans votre ville. 
   Nous nous occupons de la récupération, du chargement et du déchargement de vos produits, à la date et à l'heure de votre choix.`}
         </p>
       </div>

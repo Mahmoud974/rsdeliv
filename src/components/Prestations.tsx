@@ -11,13 +11,13 @@ export default function Prestations() {
   src="/location-fourgon-demenagement-rs-deliv-ile-de-france.webp"
   width={400}
   height={400}
-  alt="Fourgon de déménagement disponible à la location chez RS DELIV en Île-de-France"
+  alt="Fourgon de déménagement disponible à la location chez ISANO en Île-de-France"
   priority={true}
   className="rounded-lg shadow-lg w-82"
 />
         </div>
 
-        {/* Bloc du texte */}
+     
         <div className="text-gray-800 text-left  lg:w-1/2    flex flex-col justify-end">
           <p className="text-center text-blue-600">Services</p>
           <h2 className="text-4xl font-extrabold mb-6 leading-tight text-center">

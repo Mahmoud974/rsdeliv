@@ -15,15 +15,15 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-20">
+    <nav className="absolute top-0 left-0 w-full z-20 lg:mt-12">
       <div className="container mx-auto flex justify-between items-center py-3 px-4 sm:px-6 text-white">
         <Image
-          src="/logo-rs-deliv-transport-logistique.webp"
-          alt="Logo RS DELIV, entreprise de transport et logistique en Île-de-France"
+          src="/logo-isano-transport-logistique.png"
+          alt="Logo ISANO, entreprise de transport et logistique en Île-de-France"
           width={1000}
           height={1000}
           
-          className="w-20 sm:w-28 md:w-32"
+          className="  sm:w-28 md:w-48"
           priority
         />
 
