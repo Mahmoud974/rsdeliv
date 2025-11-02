@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 
 export default function Services() {
   return (
-    <div className="relative w-full h-[400px] sm:h-[550px] lg:h-[400px]">
+    <div  className="relative w-full h-[400px] sm:h-[550px] lg:h-[400px]">
       <Image
         src="/container.webp"
         alt="Photo de plusieurs fourgons"
@@ -13,8 +13,8 @@ export default function Services() {
         className="absolute inset-0 shadow-lg filter brightness-50"
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center space-y-4 px-4">
-        <p>Nos services</p>
-        <h2 className="text-3xl sm:text-4xl font-extrabold mb-6 leading-tight">
+      
+        <h2 className="text-3xl sm:text-4xl font-extrabold   leading-tight">
           Explorez nos services uniques
         </h2>
         <p className="lg:text-lg sm:w-1/2">
@@ -24,7 +24,8 @@ export default function Services() {
           solutions parfaites pour vous. Découvrez tout ce que nous avons à
           offrir.
         </p>
-        <Button>Découvrez Nos Offres</Button>
+        
+        <Button className="bg-blue-600 text-white rounded-none">Découvrez Nos Offres</Button>
       </div>
     </div>
   );

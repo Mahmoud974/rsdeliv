@@ -13,9 +13,10 @@ export default function Location() {
     setExpandedId(expandedId === id ? null : id);
   };
   return (
-    <section className="container mx-auto  pb-16 mt-7">
-      <p className="text-center text-xl font-semibold mb-8">Locations</p>
+    <section id="services" className="container mx-auto  pb-16 mt-7">
+     
       <div className="text-center mx-auto lg:w-2/3 mb-8">
+      <p className="text-center text-blue-600">Services</p>
         <h2 className="text-3xl font-bold ">
           Véhicule disponible pour vos livraisons
         </h2>

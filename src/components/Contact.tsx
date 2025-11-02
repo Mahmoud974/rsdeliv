@@ -58,15 +58,15 @@ export default function ContactForm() {
       setFormErrors({ email: "", message: "" });
       console.log("Form submitted:", formData);
 
-      // Afficher le message de succès
+      
       setSuccessMessage(true);
 
-      // Masquer le message après 3 secondes
+ 
       setTimeout(() => {
         setSuccessMessage(false);
       }, 3000);
 
-      // Réinitialiser le formulaire après l'envoi
+ 
       setFormData({
         name: "",
         poem: "",
@@ -79,7 +79,7 @@ export default function ContactForm() {
 
   return (
     <section className="container mx-auto p-6 mb-6" id="contact">
-      <p className="text-center">Contact</p>
+      <p className="text-center text-blue-600">Contact</p>
       <h2 className="text-3xl font-bold text-center mb-6">
         Vous souhaitez en savoir plus ?
       </h2>

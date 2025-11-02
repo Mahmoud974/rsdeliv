@@ -19,7 +19,7 @@ export default function Prestations() {
 
      
         <div className="text-gray-800 text-left  lg:w-1/2    flex flex-col justify-end">
-          <p className="text-center text-blue-600">Services</p>
+          
           <h2 className="text-4xl font-extrabold mb-6 leading-tight text-center">
             Des prestations sur mesure, fiables et sécurisées :
           </h2>

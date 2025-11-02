@@ -28,7 +28,7 @@ export default function Navbar() {
         />
 
         <ul className="hidden lg:flex gap-8 text-lg">
-          {["Accueil", "Qui sommes-nous", "Services", "Contact", "FAQ"].map(
+          {["Accueil", "Services",  "FAQ", "Contact"].map(
             (item) => (
               <li key={item}>
                 <a
@@ -53,7 +53,7 @@ export default function Navbar() {
                 <SheetDescription />
               </SheetHeader>
               <ul className="flex flex-col gap-4 mt-4 text-lg">
-                {["Accueil", "Qui sommes-nous", "Services", "Contact", "FAQ"].map(
+                {["Accueil", "Services",  "FAQ", "Contact"].map(
                   (item) => (
                     <li key={item}>
                       <a

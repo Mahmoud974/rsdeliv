@@ -92,7 +92,7 @@ export default function Cardtransport({
       )}
 
       <CardFooter>
-        <Button className="w-full" onClick={toggleExpand}>
+        <Button className="w-full rounded-none  text-white" onClick={toggleExpand}>
           {isExpanded ? "FERMER" : "EN SAVOIR +"}
         </Button>
       </CardFooter>

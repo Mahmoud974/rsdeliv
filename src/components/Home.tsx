@@ -26,13 +26,7 @@ export default function Home() {
       </div>
 
       {/* --- SECTION PRINCIPALE --- */}
-      <section
-        className="
-          relative 
-          h-[80vh] sm:h-[85vh] lg:h-[100vh]
-          pt-[140px] sm:pt-[160px] lg:pt-0
-        "
-      >
+      <section className="relative h-screen overflow-hidden">
         {/* Vidéo de fond */}
         <video
           src="/transport-logistique-rs-deliv-ile-de-france.mp4"
@@ -46,14 +40,14 @@ export default function Home() {
         {/* Overlay sombre */}
         <div className="absolute inset-0 bg-black/50 -z-0" />
 
-        {/* Contenu central */}
-        <div className="relative flex flex-col justify-center items-center text-center z-10 px-4 sm:px-8 h-full">
-          <div className="max-w-5xl">
-            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-extrabold text-white leading-tight">
+        {/* Contenu centré */}
+        <div className="relative z-10 flex flex-col items-center justify-center text-center h-full px-6 sm:px-10">
+          <div className="max-w-7xl">
+            <h1 className="text-3xl sm:text-5xl lg:text-8xl font-extrabold text-white leading-tight">
               <strong>Transport</strong> & logistique à{" "}
               <strong>Paris et en Île-de-France</strong>
             </h1>
-            <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-2xl text-gray-200 leading-relaxed">
+            <p className="mt-6 text-sm sm:text-base md:text-lg lg:text-2xl text-gray-200 leading-relaxed">
               Installée dans le Val-de-Marne, <strong>ISANO</strong> est votre
               expert en{" "}
               <strong className="text-blue-500">transport location</strong>{" "}
